@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var width = 0.5
+    @State var height = 0.5
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            CursorView(cursor: $width)
+            CursorView(cursor: $height)
+            Text("\(width*height)")
         }
         .padding()
     }
