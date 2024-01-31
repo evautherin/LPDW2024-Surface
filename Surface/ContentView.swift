@@ -15,9 +15,9 @@ struct ContentView: View {
         let area = width*height
         
         VStack {
-            CursorView(cursor: $width)
-            CursorView(cursor: $height)
-            Text("\(area)")
+            LengthView(label: "Width", value: $width)
+            LengthView(label: "Height", value: $height)
+            Text("Area: \(area)")
         }
         .padding()
     }
